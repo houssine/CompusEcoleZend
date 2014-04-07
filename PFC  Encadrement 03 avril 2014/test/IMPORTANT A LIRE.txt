@@ -1,0 +1,9 @@
+1- MySQL dans notre cas a un mot de passe
+ donc pour pouvoir exécuter ce projet il faut s'assurer 
+que MySQL  a un mot de passe ou non et modifier la ligne 
+resources.db.params.password = "123456" du fichier
+C:\wamp\www\Test\application\configs\application.ini
+2- Le formulaire auth.php est le seul commenté, les autres sont identiques à ce formulaire
+3- Il manque les validateurs ( nous travaillons dessus)
+4- Très important : pour ouvrir chaque rubrique il est necessaire de relancer le projet de nouveau nous travaillons dessus pour que ça soit plus fluide
+
