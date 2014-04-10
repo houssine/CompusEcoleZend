@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+header('Content-type: text/html; charset=UTF-8');
+?>
 <html lang="en">
 <head>
     <title>Campus</title>
@@ -13,17 +16,17 @@
   <div class="main">
   <!--==============================header=================================-->
     <header>
-        <h1><a href="index.php"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1> 
+        <h1><a href="index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1> 
         <div class="clear"></div>    
         <nav class="box-shadow">
             <div>
                 <ul class="menu">
-                    <li class="home-page current"><a href="index.php"><span></span></a></li>
-                    <li><a href="index/apropos">A propos </a></li>
-                     <li><a href="index/auth">Authentification</a>
-                    <li><a href="index/campus">Campus</a></li>
-                    <li><a href="index/contact">Contactez-nous</a></li>
-                    <li><a href="index/aide">Aide</a></li>
+                    
+                    <li><a href="apropos">A propos </a></li>
+                     <li><a href="auth">Authentification</a>
+                    <li><a href="campus">Campus</a></li>
+                    <li><a href="contact">Contactez-nous</a></li>
+                    <li><a href="aide">Aide</a></li>
                   
            
                 </ul>
@@ -36,20 +39,41 @@
     </header>   
   <!--==============================content================================-->
     <section id="content">
-        <div class="container_12">
+        <div class="container_12">	
           <div class="grid_12">
-            <div class="pad-0 border-1">
-                <center><h1 class="top-1 p0">Autres Campus</h1></center>
-                
-                <p class="p2"></p>
+            <div class="wrap pad-3">
+                <div class="block-5">
+                    <h3>Autres campus</h3>
+                     <ul class="list-1">
+                    	<li><?php $bdd= new PDO('mysql:host=localhost;dbname=GestionCampus','root','123456');
+                              $requete = $bdd->query('SELECT * FROM campus');
+                              while($data = $requete->fetch()){
+                              	echo '<h4>'.$data['id_campus'].'</h4>';
+                              	echo '<h4>'.$data['arrondissement_campus'].'</h4>';
+                              }                 
+                              $requete->closeCursor();
+                ?></li>
+                    	 
+                    </ul>
+                </div>
+                <div class="block-6">
+                    <h3 class="p6">Vous êtes les bienvenue !</h3>
+                    <div class="wrap">
+                    	 <img src="<?php echo $this->baseUrl();?>/images/campus.jpg" alt class="img-border img-indent-2">
+                        <div class="extra-wrap">
+                            <p><a href="#" class="link"><h4><strong>Tu me dis, j'oublie; tu m'enseignes, je me souviens; tu m'impliques, j'apprends !</strong></h4></a></p>
+                            <p class="p6">Nous nous situons non seulement à Rabat-ville, mais aussi à Hassan et à Agdal!</p>
+                    	</div>
+                    </div>
+                </div>
             </div>
-            </div>
-            </div>
+          </div>
+          <div class="clear"></div>
+        </div> 
     </section> 
-    
 <!--==============================footer=================================-->
     <footer>
-        <p>� 2014 Campus</p>
+        <p>� 2014 Campus</p>
     </footer>	    
 </body>
 </html>

@@ -821,7 +821,7 @@ class Zend_Http_Client
      */
     public function setUnmaskStatus($status = true)
     {
-        $this->_unmaskStatus = (BOOL);
+        $this->_unmaskStatus = (BOOL)
         $status;
         return $this;
     }

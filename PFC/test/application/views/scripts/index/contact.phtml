@@ -1,4 +1,7 @@
 <html lang="en">
+<?php
+header('Content-type: text/html; charset=UTF-8');
+?>
 <head>
     <title>Contactez-nous</title>
     <meta charset="utf-8">
@@ -13,17 +16,17 @@
   <div class="main">
   <!--==============================header=================================-->
     <header>
-        <h1><a href="index.html"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>
+        <h1><a href="index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>
         <div class="clear"></div>    
         <nav class="box-shadow">
             <div>
                <ul class="menu">
-                    <li class="home-page"><a href="index.php"><span></span></a></li>
-                    <li><a href="index/apropos">A propos </a></li>
-                     <li><a href="index/auth">Authentification</a>
-                    <li><a href="index/campus">Campus</a></li>
-                    <li><a href="index/contact" class="current">Contactez-nous</a></li>
-                    <li><a href="index/aide">Aide</a></li>
+                    
+                    <li><a href="apropos">A propos </a></li>
+                     <li><a href="auth">Authentification</a>
+                    <li><a href="campus">Campus</a></li>
+                    <li><a href="contact">Contactez-nous</a></li>
+                    <li><a href="aide">Aide</a></li>
                   
                 </ul>
                  <div class="logoff">
@@ -35,23 +38,36 @@
         </nav>
     </header>   
   <!--==============================content================================-->
-     <section id="content">
-        <center><div class="container_12">
-          <div class="grid_12">
-            <div class="wrap pad-3">
-               <div class="block-6"  Style="background:#55b7c8">
-                    <center><h3>Contactez-nous</h3></center>
-            <center>   <?php echo $this->form;?></center>
-                </div>
-            </div>
-          </div>
-          <div class="clear"></div>
-        </div>
-        </center>
-    </section>    
+  <section id="content" Style="background:#F0F8FF" >
+  <center><img src="<?php echo $this->baseUrl();?>/images/contact.jpg"></center></br>
+     <section id="content" >
+            <article>
+              <form id="contacts-form" action="" method="post">
+                <fieldset>
+                  <div class="field">
+                    <label>Ton nom et prÃ©nom:</label>
+                    <input type="text" name="name" value=""/>
+                  </div>
+                  <div class="field">
+                    <label>Ton adresse Email:</label>
+                    <input type="email" name="email" value=""/>
+                  </div>
+                  <div class="field">
+                    <label>Ton message:</label>
+                    <textarea name="msg"></textarea>
+                  </div>
+                   <div class="btns">
+                   <center><a href="#" class="button"  onclick="document.getElementById('contacts-form').submit()">Envoyer</a></center>
+                   </div>
+                  
+                </fieldset>
+              </form>
+            </article> 
+          </section>
+       </section>  
 <!--==============================footer=================================-->
     <footer>
-        <p>© 2014 Campus</p>
+        <p>ï¿½ 2014 Campus</p>
     </footer> 
   
 </body>

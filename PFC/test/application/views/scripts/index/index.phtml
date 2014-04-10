@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+header('Content-type: text/html; charset=UTF-8');
+?>
 <html lang="en">
 <head>
     <title>Home</title>
@@ -35,12 +38,11 @@
   <div class="main">
   <!--==============================header=================================-->
     <header>
-        <h1><a href="index.php"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>   
+        <h1><a href="index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>   
         <div class="clear"></div>    
         <nav class="box-shadow">
             <div>
                 <ul class="menu">
-                    <li class="home-page current"><a href="index.php"><span></span></a></li>
                     <li><a href="index/apropos">A propos </a></li>
                      <li><a href="index/auth">Authentification</a>
                     <li><a href="index/campus">Campus</a></li>
@@ -60,17 +62,17 @@
         <div id="slide" class="box-shadow">		
             <div class="slider">
                 <ul class="items">
-                    <li><img src="images/image1.jpg" alt="" /><div class="banner">Votre avenir est notre priorite !&nbsp;</div></li>
-                    <li><img src="images/image2.jpg" alt="" /><div class="banner">Ensemble, nous allors batir votre avenir !&nbsp;</div></li>
-                    <li><img src="images/image3.jpg" alt="" /><div class="banner">L'union fait la force !&nbsp;</div></li>
+                    <li><img src="<?php echo $this->baseUrl();?>/images/image1.jpg" alt="" /><div class="banner">Votre avenir est notre priorité !&nbsp;</div></li>
+                    <li><img src="<?php echo $this->baseUrl();?>/images/image2.jpg" alt="" /><div class="banner">Ensemble, nous allors bâtir votre avenir !&nbsp;</div></li>
+                    <li><img src="<?php echo $this->baseUrl();?>/images/image3.jpg" alt="" /><div class="banner">L'union fait la force !&nbsp;</div></li>
                 </ul>
             </div>	
         </div>
         <div class="container_12">
           <div class="grid_12">
             <div class="pad-0 border-1">
-                <h2 class="top-1 p0">Nous allons vous amener vers le chemin du succes!</h2>
-                <p class="p2">Ce site est fait pour vous faciliter la vie de tous les jours.</br> Vous etudiants et professeurs a l'espace d'un clic vous trouverier tout ce qu'il vous faut.</br> Vous etes les bienvenues !!</p>
+                <h2 class="top-1 p0">Nous allons vous amener vers le chemin du succès!</h2>
+                <p class="p2">Ce site est fait pour vous faciliter la vie de tous les jours.</br> Vous étudiants et professeurs à l'espace d'un clic vous trouverier tout ce qu'il vous faut.</br> Vous êtes les bienvenues !!</p>
             </div>
             </div>
             </div>
@@ -78,7 +80,7 @@
          
 <!--==============================footer=================================-->
     <footer>
-        <p>� 2014 Campus</p>
+        <p>� 2014 Campus</p>
     </footer> 
 
        

@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+header('Content-type: text/html; charset=UTF-8');
+?>
 <html lang="en">
 <head>
     <title>Admin</title>
@@ -15,17 +18,17 @@
   <div class="main">
   <!--==============================header=================================-->
     <header> 
-    <h1><a href="index.php"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>     
+    <h1><a href="index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>     
         <div class="clear"></div>    
         <nav class="box-shadow">
             <div>
                 <ul class="menu">
-                    <li class="home-page"><a href="index.php"><span></span></a></li>
-                    <li><a href="index/apropos">A propos </a></li>
-                     <li><a href="index/auth">Authentification</a>
-                    <li><a href="index/campus">Campus</a></li>
-                    <li><a href="index/contact">Contactez-nous</a></li>
-                    <li><a href="index/aide">Aide</a></li>
+                    
+                    <li><a href="apropos">A propos </a></li>
+                     <li><a href="auth">Authentification</a>
+                    <li><a href="campus">Campus</a></li>
+                    <li><a href="contact">Contactez-nous</a></li>
+                    <li><a href="aide">Aide</a></li>
                 </ul>
                  <div class="logoff">
                    <a href="index">EXIT</a>
@@ -42,8 +45,16 @@
                 <div class="block-5">
                     <h3>Que voulez-vous faire?</h3>
                      <ul class="list-1">
-                    	<li><a href="insetudiant">Ajouter un etudiant</a></li>
-                        <li><a href="insprof">Ajouter un professeur</a></li>
+                    	<li><a href="insetudiant">Ajouter un étudiant</a></li>
+                    	 <li><a href="insprof">Ajouter un professeur</a></li>
+                        <li><a href="ajoutersemestre">Ajouter un semestre</a></li>
+                            <li><a href="ajouterfiliere">Ajouter une filière</a></li>
+                          <li><a href="ajouterniveau">Ajouter un niveau</a></li>
+                        <li><a href="ajoutergroupe">Ajouter un groupe</a></li>
+                          <li><a href="ajoutermodule">Ajouter un module </a></li>
+                         <li><a href="ajoutermatiere">Ajouter une matière</a></li>
+                           <li><a href="ajoutercampus">Ajouter un campus</a></li>
+                        
                     </ul>
                 </div>
                 <div class="block-6">
@@ -52,7 +63,7 @@
                     	 <img src="<?php echo $this->baseUrl();?>/images/admin.jpg" alt class="img-border img-indent-2">
                         <div class="extra-wrap">
                             <p><a href="#" class="link"><strong>Ceci est votre espace administrateur</strong></a></p>
-                            <p class="p6">Vous pouvez ici ajouter un professeur ou un etudiant.</p>
+                            <p class="p6">Vous pouvez ici ajouter: un étudiant, un prefesseur, un semestre, une filière, un niveau, un groupe, un module, une matière et un campus.</p>
                     	</div>
                     </div>
                 </div>
@@ -63,7 +74,7 @@
     </section> 
   <!--==============================footer=================================-->
     <footer>
-        <p>� 2014 Campus</p>
+        <p>� 2014 Campus</p>
     </footer> 
   
 	    

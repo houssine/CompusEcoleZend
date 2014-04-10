@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+header('Content-type: text/html; charset=UTF-8');
+?>
 <html lang="en">
 <head>
     <title>A propos</title>
@@ -6,49 +9,100 @@
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/reset.css">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/grid_12.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/slider.css">
     <script src="<?php echo $this->baseUrl();?>/js/jquery-1.7.min.js"></script>
     <script src="<?php echo $this->baseUrl();?>/js/jquery.easing.1.3.js"></script>
+    <script src="<?php echo $this->baseUrl();?>/js/tms-0.4.x.js"></script>
+    <script>
+		$(document).ready(function(){				   	
+			$('.slider')._TMS({
+				show:0,
+				pauseOnHover:true,
+				prevBu:false,
+				nextBu:false,
+				playBu:false,
+				duration:1000,
+				preset:'fade',
+				pagination:true,
+				pagNums:false,
+				slideshow:7000,
+				numStatus:true,
+				banners:'fromRight',
+				waitBannerAnimation:false,
+				progressBar:false
+			})		
+		});
+	</script>
 </head>
 <body>
   <div class="main">
   <!--==============================header=================================-->
     <header>
-        <h1><a href="index.php"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1> 
+        <h1><a href="index.php"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>   
         <div class="clear"></div>    
         <nav class="box-shadow">
             <div>
                 <ul class="menu">
-                    <li class="home-page current"><a href="index.php"><span></span></a></li>
-                    <li><a href="index/apropos">A propos </a></li>
-                     <li><a href="index/auth">Authentification</a>
-                    <li><a href="index/campus">Campus</a></li>
-                    <li><a href="index/contact">Contactez-nous</a></li>
-                    <li><a href="index/aide">Aide</a></li>
+                    <li><a href="apropos">A propos </a></li>
+                     <li><a href="auth">Authentification</a>
+                    <li><a href="campus">Campus</a></li>
+                    <li><a href="contact">Contactez-nous</a></li>
+                    <li><a href="aide">Aide</a></li>
                   
            
                 </ul>
-                 <div class="logoff">
+              <div class="logoff">
                    <a href="index">EXIT</a>
                 </div>
                 <div class="clear"></div>
-            </div>
         </nav>
     </header>   
   <!--==============================content================================-->
     <section id="content">
+        <div id="slide" class="box-shadow">		
+            <div class="slider">
+                <ul class="items">
+                  <li><img src="<?php echo $this->baseUrl();?>/images/engagement.jpg" alt="" /><div class="banner">UN ENGAGEMENT ! &nbsp;</div></li>
+                    <li><img src="<?php echo $this->baseUrl();?>/images/enseignement.jpg" alt="" /><div class="banner">UN ENSEIGNEMENT DE QUALITÉ !&nbsp;</div></li>
+                   <li><img src="<?php echo $this->baseUrl();?>/images/loisir.jpg" alt="" /><div class="banner">UN CENTRE DE LOISIRS ! !&nbsp;</div></li>
+                </ul>
+            </div>	
+        </div>
         <div class="container_12">
           <div class="grid_12">
             <div class="pad-0 border-1">
-                <center><h1 class="top-1 p0">A propos</h1></center>
-                <p class="p2"></p>
+                <h2 class="top-1 p0">Au Campus, une pédagogie par l’action !</h2>
+                <p class="p2">
+Travailler à partir d’outils pédagogiques adaptés et performants,
+Maria Montessori entre autres, être au contact direct et permanent
+avec la nature et les animaux, être confrontés aux différentes disciplines linguistiques,
+scientifiques, artistiques et sportives, permet à nos élèves d’avoir un niveau d’excellence
+et d’être en interaction avec les apprentissages.
+Ils observent, s’interrogent, explorent, prennent des initiatives
+et de ce fait, EXIT la situation de passivité !
+Etre placé au centre de l’action aide l’enfant à s’impliquer, se sentir concerné
+et lui permet des temps de concentration plus longs et productifs.
+De même que la mobilisation  de ses sens
+et de sa motricité renforce la mémorisation. Notre pédagogie place nos élèves au coeur des apprentissages.
+A travers elle, ils vont en retirer les concepts, se les approprier et développer des aptitudes.
+   <h2 class="top-1 p0">Au Campus, la réussite de nos élèves sur tous les plans:</h2>
+intellectuelle, physique, morale et artistique,
+en prenant en compte la pluralité et la diversité des aptitudes de chacun de nos élèves,
+en leur transmettant le plaisir d'apprendre,
+en leur donnant le goût de l'effort et du travail bien fait, en les incitant à être autonomes
+et méthodiques et la liste est non exhaustive !
+Le champ pédagogique unique et pluridisciplinaire du Campus offre une dynamique scolaire qui implique les élèves, les enseignants et l'objet de connaissance qui n'est pas uniquement de la matière didactique.
+Tout l'environnement du Campus est source d'apprentissages.
+C'est autour de ses outils précieux et diversifiés que le potentiel de nos élèves va s'exprimer et se développer tout au long de leur scolarité.
+Notre engagement est multiple et non exhaustif : donner à nos élèves les atouts essentiels et déterminants pour s'adapter à un monde en mouvement et franchir avec succès les étapes décisives de leur vie.
             </div>
             </div>
             </div>
-    </section> 
+        </section>
     
 <!--==============================footer=================================-->
     <footer>
-        <p>� 2014 Campus</p>
+        <p>� 2014 Campus</p>
     </footer>	    
 </body>
 </html>

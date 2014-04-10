@@ -146,3 +146,54 @@ dl dd a:hover {}
 #form label {position:relative;overflow:hidden;display:block;min-height:41px}
 .btns {text-align:left; padding-top:20px}
 .btns a {display:inline-block; margin:0 10px 0 0px}
+
+
+/*----- forms -----*/
+#contacts-form { 
+	clear:right;
+	width:100%;
+	overflow:hidden;
+	text-align: center;
+}
+	#contacts-form fieldset { 
+		border:none;
+		float:center;
+		
+	}
+		#contacts-form .field { 
+			clear:both;
+		}
+			#contacts-form label { 
+				float:center;
+				width:110px;
+				line-height:18px;
+				padding-bottom:6px;
+				font-weight:bold;
+			}
+			#contacts-form input {
+				width:205px;
+				padding:1px 0 1px 3px;
+				background:none;
+				border:1px solid #e5e5e5;
+				color:#616161;
+				float:center;
+			}
+			#contacts-form input:invalid {
+				border-color:red;
+			}
+			#contacts-form textarea { 
+				width:450px;
+				height:215px;
+				padding:1px 0 1px 3px;
+				background:none;
+				border:1px solid #e5e5e5;
+				color:#616161;
+				margin-bottom:12px;
+				overflow:auto;
+				float:center;
+			}
+			#contacts-form div:last-child {
+				padding-left:110px;
+			}
+
+/*==========================================*/

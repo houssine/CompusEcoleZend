@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+header('Content-type: text/html; charset=UTF-8');
+?>
 <html lang="en">
 <head>
     <title>Ajout Etudiant</title>
@@ -13,16 +16,17 @@
   <div class="main">
   <!--==============================header=================================-->
     <header>
+     <h1><a href="index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>
         <div class="clear"></div>    
         <nav class="box-shadow">
             <div>
                 <ul class="menu">
-                    <li class="home-page current"><a href="index.php"><span></span></a></li>
-                    <li><a href="index/apropos">A propos </a></li>
-                     <li><a href="index/auth">Authentification</a>
-                    <li><a href="index/campus">Campus</a></li>
-                    <li><a href="index/contact">Contactez-nous</a></li>
-                    <li><a href="index/aide">Aide</a></li>
+                   
+                    <li><a href="apropos">A propos </a></li>
+                     <li><a href="auth">Authentification</a>
+                    <li><a href="campus">Campus</a></li>
+                    <li><a href="contact">Contactez-nous</a></li>
+                    <li><a href="aide">Aide</a></li>
                   
            
                 </ul>
@@ -50,7 +54,7 @@
     </section> 
   <!--==============================footer=================================-->
     <footer>
-        <p>© 2014 Campus</p>
+        <p>ï¿½ 2014 Campus</p>
     </footer> 
   
 </body>
