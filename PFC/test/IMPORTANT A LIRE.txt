@@ -1,2 +1,9 @@
-21- gérer les sessions 
-2- ajouter la suppression et la modification pour l'administrateur
+1- MySQL dans notre cas a un mot de passe
+ donc pour pouvoir exécuter ce projet il faut s'assurer 
+que MySQL  a un mot de passe ou non et modifier la ligne 
+resources.db.params.password = "123456" du fichier
+C:\wamp\www\NomProjet\application\configs\application.ini
+2- Le formulaire ajouteretudiant.php est le seul commenté, les autres sont identiques à ce formulaire
+3- Les fichiers avec l'extention .phtml dans views, c'est là ou il y a les éléments qui s'affichent
+lors de l'ouverture du site. Ils ne contiennent aucun traitement sauf ceux qui sont destinés au listing
+(récupération des données depuis la base de données et les afficher).

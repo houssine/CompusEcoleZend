@@ -18,20 +18,20 @@ header('Content-type: text/html; charset=UTF-8');
   <div class="main">
   <!--==============================header=================================-->
     <header> 
-    <h1><a href="index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>     
+    <h1><a href="<?php echo $this->baseUrl();?>/index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>     
         <div class="clear"></div>    
         <nav class="box-shadow">
             <div>
                 <ul class="menu">
-                    
-                    <li><a href="apropos">A propos </a></li>
-                     <li><a href="auth">Authentification</a>
-                    <li><a href="campus">Campus</a></li>
-                    <li><a href="contact">Contactez-nous</a></li>
-                    <li><a href="aide">Aide</a></li>
+                
+                    <li><a href="<?php echo $this->baseUrl();?>/index/apropos">A propos </a></li>
+                     <li><a href="<?php echo $this->baseUrl();?>/index/auth">Authentification</a>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/campus">Campus</a></li>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/contact">Contactez-nous</a></li>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/aide">Aide</a></li>
                 </ul>
                  <div class="logoff">
-                   <a href="index">EXIT</a>
+                   <a href="<?php echo $this->baseUrl();?>/index/logout">EXIT</a>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -45,20 +45,37 @@ header('Content-type: text/html; charset=UTF-8');
                 <div class="block-5">
                     <h3>Que voulez-vous faire?</h3>
                      <ul class="list-1">
-                    	<li><a href="insetudiant">Ajouter un étudiant</a></li>
-                    	 <li><a href="insprof">Ajouter un professeur</a></li>
+                    	<li><a href="ajouteretudiant">Ajouter un étudiant</a></li>
+                    	<li><a href="idetudiant">Modifier un étudiant</a></li>
+                    	<li><a href="supprimeretudiant">Supprimer un étudiant</a></li>
+                    	 <li><a href="ajouterprof">Ajouter un professeur</a></li>
+                    	 <li><a href="idprof">Modifier un professeur</a></li>
+                    	<li><a href="supprimerprof">Supprimer un professeur</a></li>
                         <li><a href="ajoutersemestre">Ajouter un semestre</a></li>
+                        <li><a href="idsemestre">Modifier un semestre</a></li>
+                    	<li><a href="supprimersemestre">Supprimer un semestre</a></li>
                             <li><a href="ajouterfiliere">Ajouter une filière</a></li>
+                            <li><a href="idfiliere">Modifier une filière</a></li>
+                    	<li><a href="supprimerfiliere">Supprimer une filière</a></li>
                           <li><a href="ajouterniveau">Ajouter un niveau</a></li>
+                          <li><a href="idniveau">Modifier un niveau</a></li>
+                    	<li><a href="supprimerniveau">Supprimer un niveau</a></li>
                         <li><a href="ajoutergroupe">Ajouter un groupe</a></li>
+                        <li><a href="idgroupe">Modifier un groupe</a></li>
+                    	<li><a href="supprimergroupe">Supprimer un groupe</a></li>
                           <li><a href="ajoutermodule">Ajouter un module </a></li>
+                          <li><a href="idmodule">Modifier un module</a></li>
+                    	<li><a href="supprimermodule">Supprimer un module</a></li>
                          <li><a href="ajoutermatiere">Ajouter une matière</a></li>
+                         <li><a href="idmatiere">Modifier une matière</a></li>
+                    	<li><a href="supprimermatiere">Supprimer une matière</a></li>
                            <li><a href="ajoutercampus">Ajouter un campus</a></li>
-                        
+                           <li><a href="idcampus">Modifier un campus</a></li>
+                    	<li><a href="supprimercampus">Supprimer un campus</a></li>
                     </ul>
                 </div>
                 <div class="block-6">
-                    <h3 class="p6">Soyez le bienvenue !</h3>
+                    <h3 class="p6">Soyez le bienvenu !</h3>
                     <div class="wrap">
                     	 <img src="<?php echo $this->baseUrl();?>/images/admin.jpg" alt class="img-border img-indent-2">
                         <div class="extra-wrap">

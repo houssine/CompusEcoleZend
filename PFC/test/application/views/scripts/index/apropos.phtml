@@ -37,24 +37,24 @@ header('Content-type: text/html; charset=UTF-8');
 <body>
   <div class="main">
   <!--==============================header=================================-->
-    <header>
-        <h1><a href="index.php"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>   
+    <header> 
+    <h1><a href="<?php echo $this->baseUrl();?>/index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>     
         <div class="clear"></div>    
         <nav class="box-shadow">
             <div>
                 <ul class="menu">
-                    <li><a href="apropos">A propos </a></li>
-                     <li><a href="auth">Authentification</a>
-                    <li><a href="campus">Campus</a></li>
-                    <li><a href="contact">Contactez-nous</a></li>
-                    <li><a href="aide">Aide</a></li>
-                  
-           
+                
+                    <li><a href="<?php echo $this->baseUrl();?>/index/apropos">A propos </a></li>
+                     <li><a href="<?php echo $this->baseUrl();?>/index/auth">Authentification</a>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/campus">Campus</a></li>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/contact">Contactez-nous</a></li>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/aide">Aide</a></li>
                 </ul>
-              <div class="logoff">
-                   <a href="index">EXIT</a>
+                 <div class="logoff">
+                   <a href="<?php echo $this->baseUrl();?>/index/logout">EXIT</a>
                 </div>
                 <div class="clear"></div>
+            </div>
         </nav>
     </header>   
   <!--==============================content================================-->
@@ -62,7 +62,7 @@ header('Content-type: text/html; charset=UTF-8');
         <div id="slide" class="box-shadow">		
             <div class="slider">
                 <ul class="items">
-                  <li><img src="<?php echo $this->baseUrl();?>/images/engagement.jpg" alt="" /><div class="banner">UN ENGAGEMENT ! &nbsp;</div></li>
+                    <li><img src="<?php echo $this->baseUrl();?>/images/engagement.jpg" alt="" /><div class="banner">UN ENGAGEMENT ! &nbsp;</div></li>
                     <li><img src="<?php echo $this->baseUrl();?>/images/enseignement.jpg" alt="" /><div class="banner">UN ENSEIGNEMENT DE QUALITÉ !&nbsp;</div></li>
                    <li><img src="<?php echo $this->baseUrl();?>/images/loisir.jpg" alt="" /><div class="banner">UN CENTRE DE LOISIRS ! !&nbsp;</div></li>
                 </ul>

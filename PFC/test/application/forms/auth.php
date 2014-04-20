@@ -3,9 +3,9 @@ header('Content-type: text/html; charset=UTF-8');
 class Application_Form_auth extends Zend_Form {
 
 	public function init() {
-		//D�clarer les champs d'un formulaire
+
 		$compte = new Zend_Form_Element_Select("compte");
-		$compte->setLabel("Choisir un compte:")->setRequired(true); // champs obligatoire
+		$compte->setLabel("Choisir un compte:")->setRequired(true);
 		$compte->addMultiOptions(array (
 			'Admin' => 'Administrateur',
 			'Etudiant' => 'Etudiant',
@@ -26,7 +26,7 @@ class Application_Form_auth extends Zend_Form {
 		$password->setOptions(array (
 			'class' => 'text-input'
 		));
-		//les boutons
+
 		$seconnecter = new Zend_Form_Element_Submit("seconnecter");
 		$seconnecter->setLabel("Se connecter")->setAttribs(array (
 			'style' => 'width:100px;',
@@ -37,7 +37,7 @@ class Application_Form_auth extends Zend_Form {
 			'style' => 'width:100px;',
 			'width' => '100'
 		));
-		//Afficher tous les �l�ments;
+
 		$this->addElements(array (
 			$compte,
 			$mail,

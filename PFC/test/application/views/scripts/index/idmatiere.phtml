@@ -4,7 +4,7 @@ header('Content-type: text/html; charset=UTF-8');
 ?>
 <html lang="en">
 <head>
-    <title>Ajout Etudiant</title>
+    <title>Modifier Matière</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/reset.css">
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/style.css">
@@ -15,35 +15,33 @@ header('Content-type: text/html; charset=UTF-8');
 <body>
   <div class="main">
   <!--==============================header=================================-->
-    <header>
-     <h1><a href="index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>
+    <header> 
+    <h1><a href="<?php echo $this->baseUrl();?>/index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>     
         <div class="clear"></div>    
         <nav class="box-shadow">
             <div>
                 <ul class="menu">
-                   
-                    <li><a href="apropos">A propos </a></li>
-                     <li><a href="auth">Authentification</a>
-                    <li><a href="campus">Campus</a></li>
-                    <li><a href="contact">Contactez-nous</a></li>
-                    <li><a href="aide">Aide</a></li>
-                  
-           
+                
+                    <li><a href="<?php echo $this->baseUrl();?>/index/apropos">A propos </a></li>
+                     <li><a href="<?php echo $this->baseUrl();?>/index/auth">Authentification</a>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/campus">Campus</a></li>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/contact">Contactez-nous</a></li>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/aide">Aide</a></li>
                 </ul>
                  <div class="logoff">
-                   <a href="index">EXIT</a>
+                   <a href="<?php echo $this->baseUrl();?>/index/logout">EXIT</a>
                 </div>
                 <div class="clear"></div>
             </div>
         </nav>
-    </header>   
+    </header>     
   <!--==============================content================================-->
     <section id="content">
         <center><div class="container_12">
           <div class="grid_12">
             <div class="wrap pad-3">
                 <div class="block-6"  Style="background:#55b7c8">
-                    <center><h3>Ajouter Etudiant</h3></center>
+                    <center><h3></h3></center>
             <center>   <?php echo $this->form;?></center>
                 </div>
             </div>
@@ -54,7 +52,7 @@ header('Content-type: text/html; charset=UTF-8');
     </section> 
   <!--==============================footer=================================-->
     <footer>
-        <p>� 2014 Campus</p>
+        <p> 2014 Campus</p>
     </footer> 
   
 </body>

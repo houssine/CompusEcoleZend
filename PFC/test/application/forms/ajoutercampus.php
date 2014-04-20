@@ -2,10 +2,9 @@
 class Application_Form_ajoutercampus extends Zend_Form {
 
 	public function init() {
-		//D�clarer les champs d'un formulaire
+
 		$id_campus = new Zend_Form_Element_Text("id_campus");
-		$id_campus->setLabel("Id Campus :")->setRequired(true) // champs obligatoire
-		->style = "width: 200px;";
+		$id_campus->setLabel("Id Campus :")->setRequired(true)->style = "width: 200px;";
 		$id_campus->setAttrib("placeholder", "Id du campus")->setOptions(array (
 			'class' => 'text-input'
 		));
@@ -32,7 +31,6 @@ class Application_Form_ajoutercampus extends Zend_Form {
 			'width' => '100'
 		));
 
-		//Afficher tous les �l�ments;
 		$this->addElements(array (
 			$id_campus,
 			$id_admin,

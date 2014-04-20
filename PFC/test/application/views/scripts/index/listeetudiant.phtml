@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<?php
+header('Content-type: text/html; charset=UTF-8');
+?>
+<html lang="en">
+<head>
+    <title>Liste des étudiants</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/grid_12.css">
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    
+	
+</head>
+<body>
+  <div class="main">
+  <!--==============================header=================================-->
+    <header> 
+    <h1><a href="<?php echo $this->baseUrl();?>/index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>     
+        <div class="clear"></div>    
+        <nav class="box-shadow">
+            <div>
+                <ul class="menu">
+                
+                    <li><a href="<?php echo $this->baseUrl();?>/index/apropos">A propos </a></li>
+                     <li><a href="<?php echo $this->baseUrl();?>/index/auth">Authentification</a>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/campus">Campus</a></li>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/contact">Contactez-nous</a></li>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/aide">Aide</a></li>
+                </ul>
+                 <div class="logoff">
+                   <a href="<?php echo $this->baseUrl();?>/index/logout">EXIT</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </nav>
+    </header>   
+  <!--==============================content================================-->
+      <section id="content">
+        <div class="container_12">	
+          <div class="grid_12">
+            <div class="wrap pad-3">
+                <div class="block-5">
+                    <h3>Liste des étudiants du campus </h3>
+                    </br>
+                    <h4> <strong> Remarque : " les données contenues dans cette page doivent être utilisées dans un cadre strictement professionnel. Tout abus en vers autrui peut vous nuire ! " </strong> </h4>
+                     <ul class="list-1">
+                    	<li><?php $bdd= new PDO('mysql:host=localhost;dbname=GestionCampus','root','123456');
+                              $requete = $bdd->query('SELECT nom_etudiant,prenom_etudiant,mail_etudiant FROM etudiant');
+                              while($data = $requete->fetch()){
+                              	echo '<h4> Nom : '.$data['nom_etudiant'].'</h4>'.' '.'<h4> Prénom : '.$data['prenom_etudiant'].'</h4>'.' '.'<h4> Email: '.$data['mail_etudiant'].'</h4>';
+                              }                 
+                              $requete->closeCursor();
+                ?></li>
+                    	 
+                    </ul>
+                </div>
+                <div class="block-6">
+               
+                    <div class="wrap">
+                    	 <img src="<?php echo $this->baseUrl();?>/images/etudiants.png" alt class="img-border img-indent-2">
+                        
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div> 
+    </section> 
+  <!--==============================footer=================================-->
+    <footer>
+        <p>� 2014 Campus</p>
+    </footer> 
+  
+	    
+</body>
+</html>

@@ -1,12 +1,24 @@
 <?php
 header('Content-type: text/html; charset=UTF-8');
-class Application_Form_AjouterMatiere extends Zend_Form {
+class Application_Form_ajoutermatiere extends Zend_Form {
 
 	public function init() {
 
 		$id_matiere = new Zend_Form_Element_Text("id_matiere");
 		$id_matiere->setLabel("ID de la matiere :")->setRequired(true)->style = "width: 200px;";
 		$id_matiere->setAttrib("placeholder", "ID de la matière")->setOptions(array (
+			'class' => 'text-input'
+		));
+
+		$id_prof = new Zend_Form_Element_Text("id_prof");
+		$id_prof->setLabel("ID du professeur :")->setRequired(true)->style = "width: 200px;";
+		$id_prof->setAttrib("placeholder", "ID du professeur")->setOptions(array (
+			'class' => 'text-input'
+		));
+
+		$id_module = new Zend_Form_Element_Text("id_module");
+		$id_module->setLabel("ID du module :")->setRequired(true)->style = "width: 200px;";
+		$id_module->setAttrib("placeholder", "ID du module")->setOptions(array (
 			'class' => 'text-input'
 		));
 
@@ -42,6 +54,8 @@ class Application_Form_AjouterMatiere extends Zend_Form {
 
 		$this->addElements(array (
 			$id_matiere,
+			$id_prof,
+			$id_module,
 			$nom,
 			$volume,
 			$coef,

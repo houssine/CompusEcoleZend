@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<?php
+header('Content-type: text/html; charset=UTF-8');
+?>
+<html lang="en">
+<head>
+    <title>Modifier Filiere</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/grid_12.css">
+    <script src="<?php echo $this->baseUrl();?>/js/jquery-1.7.min.js"></script>
+    <script src="<?php echo $this->baseUrl();?>/js/jquery.easing.1.3.js"></script>
+</head>
+<body>
+  <div class="main">
+  <!--==============================header=================================-->
+    <header> 
+    <h1><a href="<?php echo $this->baseUrl();?>/index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>     
+        <div class="clear"></div>    
+        <nav class="box-shadow">
+            <div>
+                <ul class="menu">
+                
+                    <li><a href="<?php echo $this->baseUrl();?>/index/apropos">A propos </a></li>
+                     <li><a href="<?php echo $this->baseUrl();?>/index/auth">Authentification</a>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/campus">Campus</a></li>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/contact">Contactez-nous</a></li>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/aide">Aide</a></li>
+                </ul>
+                 <div class="logoff">
+                   <a href="<?php echo $this->baseUrl();?>/index/logout">EXIT</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </nav>
+    </header>     
+  <!--==============================content================================-->
+    <section id="content">
+        <center><div class="container_12">
+          <div class="grid_12">
+            <div class="wrap pad-3">
+                <div class="block-6"  Style="background:#55b7c8">
+                    <center><h3></h3></center>
+            <center>   <?php echo $this->form;?></center>
+                </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+        </center>
+    </section> 
+  <!--==============================footer=================================-->
+    <footer>
+        <p> 2014 Campus</p>
+    </footer> 
+  
+</body>
+</html>

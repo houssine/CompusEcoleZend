@@ -1,12 +1,15 @@
 <?php
 header('Content-type: text/html; charset=UTF-8');
-class Application_Form_insetudiant extends Zend_Form {
-	//Avant d'ajouter des �tudiants il faut d'abord ajouter un groupe, campus etc pour ne pas avoir une injection SQL
+class Application_Form_ajouteretudiant extends Zend_Form {
+	//Avant d'ajouter des étudiants il faut d'abord ajouter un groupe, campus etc pour ne pas avoir une injection SQL
 	public function init() {
-		//Il manque les validateurs!
-
-		$id_etudiant = new Zend_Form_Element_Text("id_etudiant");
+		
+//Ajouter les éléments du formulaire et qui existent aussi dans la base de données
+		$id_etudiant = new Zend_Form_Element_Text("id_etudiant"); // équivalent à name dans le form html
+		//Le label qui sera affiché dans le formulaire
+		//setRequired(true) veut dire que ce champs est obligatoire, Si on le saisit pas un message d'erreur sera affiché
 		$id_etudiant->setLabel("Id de l'étudiant :")->setRequired(true)->style = "width: 200px;";
+		//La valeur qui sera affichée en gris dans le textbox
 		$id_etudiant->setAttrib("placeholder", "ID de l'étudiant")->setOptions(array (
 			'class' => 'text-input'
 		));
@@ -32,6 +35,7 @@ class Application_Form_insetudiant extends Zend_Form {
 		$prenom->setAttrib("placeholder", "prénom de l'étudiant")->setOptions(array (
 			'class' => 'text-input'
 		));
+		//Element radio
 		$sexe = new Zend_Form_Element_Radio("sexe");
 		$sexe->setLabel("Sexe :");
 		$sexe->setRequired(true);
@@ -57,7 +61,7 @@ class Application_Form_insetudiant extends Zend_Form {
 			'class' => 'text-input'
 		));
 
-		//
+		//Les boutons 
 		$ajouter = new Zend_Form_Element_Submit("Ajouter");
 		$ajouter->setLabel("Ajouter")->setAttribs(array (
 			'style' => 'width:100px;',
@@ -70,7 +74,7 @@ class Application_Form_insetudiant extends Zend_Form {
 			'width' => '100'
 		));
 
-		//pour afficher tous les elements;
+		//pour afficher tous les éléments
 		$this->addElements(array (
 			$id_etudiant,
 			$id_groupe,

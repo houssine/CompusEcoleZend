@@ -15,23 +15,21 @@ header('Content-type: text/html; charset=UTF-8');
 <body>
   <div class="main">
   <!--==============================header=================================-->
-    <header>
-        <h1><a href="index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1> 
+    <header> 
+    <h1><a href="<?php echo $this->baseUrl();?>/index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>     
         <div class="clear"></div>    
         <nav class="box-shadow">
             <div>
                 <ul class="menu">
-                    
-                    <li><a href="apropos">A propos </a></li>
-                     <li><a href="auth">Authentification</a>
-                    <li><a href="campus">Campus</a></li>
-                    <li><a href="contact">Contactez-nous</a></li>
-                    <li><a href="aide">Aide</a></li>
-                  
-           
+                
+                    <li><a href="<?php echo $this->baseUrl();?>/index/apropos">A propos </a></li>
+                     <li><a href="<?php echo $this->baseUrl();?>/index/auth">Authentification</a>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/campus">Campus</a></li>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/contact">Contactez-nous</a></li>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/aide">Aide</a></li>
                 </ul>
                  <div class="logoff">
-                   <a href="index">EXIT</a>
+                   <a href="<?php echo $this->baseUrl();?>/index/logout">EXIT</a>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -57,11 +55,11 @@ header('Content-type: text/html; charset=UTF-8');
                     </ul>
                 </div>
                 <div class="block-6">
-                    <h3 class="p6">Vous êtes les bienvenue !</h3>
+                    <h3 class="p6">Vous êtes les bienvenus !</h3>
                     <div class="wrap">
                     	 <img src="<?php echo $this->baseUrl();?>/images/campus.jpg" alt class="img-border img-indent-2">
                         <div class="extra-wrap">
-                            <p><a href="#" class="link"><h4><strong>Tu me dis, j'oublie; tu m'enseignes, je me souviens; tu m'impliques, j'apprends !</strong></h4></a></p>
+                            <p><a href="#" class="link"><h4><strong>"Tu me dis, j'oublie; tu m'enseignes, je me souviens; tu m'impliques, j'apprends !"</strong></h4></a></p>
                             <p class="p6">Nous nous situons non seulement à Rabat-ville, mais aussi à Hassan et à Agdal!</p>
                     	</div>
                     </div>

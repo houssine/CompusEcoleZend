@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<?php
+header('Content-type: text/html; charset=UTF-8');
+?>
+<html lang="en">
+<head>
+    <title>Espace Professeur</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/grid_12.css">
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    
+	
+</head>
+<body>
+  <div class="main">
+  <!--==============================header=================================-->
+    <header> 
+    <h1><a href="<?php echo $this->baseUrl();?>/index"><img src="<?php echo $this->baseUrl();?>/images/log.jpg" alt=""></a></h1>     
+        <div class="clear"></div>    
+        <nav class="box-shadow">
+            <div>
+                <ul class="menu">
+                
+                    <li><a href="<?php echo $this->baseUrl();?>/index/apropos">A propos </a></li>
+                     <li><a href="<?php echo $this->baseUrl();?>/index/auth">Authentification</a>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/campus">Campus</a></li>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/contact">Contactez-nous</a></li>
+                    <li><a href="<?php echo $this->baseUrl();?>/index/aide">Aide</a></li>
+                </ul>
+                 <div class="logoff">
+                   <a href="<?php echo $this->baseUrl();?>/index/logout">EXIT</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </nav>
+    </header>   
+  <!--==============================content================================-->
+    <section id="content">
+        <div class="container_12">	
+          <div class="grid_12">
+            <div class="wrap pad-3">
+                <div class="block-5">
+                    <h3>Que voulez-vous faire?</h3>
+                     <ul class="list-1">
+                    	
+                    	<li><a href="listeetudiant">Liste des étudiants </a></li>
+                        <li><a href="listefiliere">Liste des filières </a></li>
+                    	<li><a href="listegroupe">Liste du groupe/niveau/étudiant </a></li> 
+                    	<li><a href="listematiere">Liste des matières </a></li> 
+                        
+                    </ul>
+                </div>
+                <div class="block-6">
+                    <h3 class="p6">Soyez les bienvenus !</h3>
+                    <div class="wrap">
+                    	 <img src="<?php echo $this->baseUrl();?>/images/prof.jpg" alt class="img-border img-indent-2">
+                        <div class="extra-wrap">
+                            <p><a href="#" class="link"><strong>Ceci est votre espace professeur !</strong></a></p>
+                            <p class="p6">Vous pouvez ici consulter la liste des étudiants tous en accédant à toutes les informations qui pourraient vous être utile .</p>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div> 
+    </section> 
+  <!--==============================footer=================================-->
+    <footer>
+        <p>� 2014 Campus</p>
+    </footer> 
+  
+	    
+</body>
+</html>

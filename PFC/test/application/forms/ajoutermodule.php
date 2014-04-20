@@ -9,6 +9,12 @@ class Application_Form_AjouterModule extends Zend_Form {
 			'class' => 'text-input'
 		));
 
+		$id_semestre = new Zend_Form_Element_Text("id_semestre");
+		$id_semestre->setLabel("Entrer l'id du semestre :")->setRequired(true)->style = "width: 200px;";
+		$id_semestre->setAttrib("placeholder", "Id du semestre")->setOptions(array (
+			'class' => 'text-input'
+		));
+
 		$ajouter = new Zend_Form_Element_Submit("Ajouter");
 		$ajouter->setLabel("Ajouter")->setAttribs(array (
 			'style' => 'width:100px;',
@@ -23,6 +29,7 @@ class Application_Form_AjouterModule extends Zend_Form {
 
 		$this->addElements(array (
 			$id_module,
+			$id_semestre,
 			$ajouter,
 			$annuler
 		));
